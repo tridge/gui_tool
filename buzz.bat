@@ -44,6 +44,9 @@ rem C:\Users\%%USERNAME%%\Desktop\gui_tool>
 
 cd C:\Users\%USERNAME%\Desktop\gui_tool
 
+echo "LIST1"
+pip list
+
 rem pip install .
 python -m pip uninstall -y uavcan
 python -m pip uninstall -y dronecan
@@ -53,7 +56,6 @@ rem python setup.py install
 
 rem  need at least 6.6:, this gets us 6.8.2  https://github.com/marcelotduarte/cx_Freeze/discussions/949
 pip install --upgrade cx_Freeze
-
 
 rem  potential large packages/candidates to remove ( removing them prevents accidental bundling by cx_freeze)
 python -m pip uninstall -y torch
@@ -75,8 +77,16 @@ pip uninstall -y gdal wordcloud thinc rasterio mpldatacursor mpl-scatter-density
 
 pip uninstall -y pyOpenGL
 
+python pip_sizes.py
+
+echo "LIST2"
+pip list
+
 rem  put back just the needed as found in setup.py's list :
 pip install .
+
+echo "LIST3"
+pip list
 
 rem  finally make the .msi
 python setup.py install
