@@ -27,7 +27,7 @@ rem git -c filter.lfs.smudge= -c filter.lfs.required=false -c diff.mnemonicprefi
 rem  In windows explorer browse into the Desktop/WPy64-3980/ folder then double-click the 'WinPython Command Prompt.exe' to open a special cmd.exe dos box.
 rem "C:\Users\%USERNAME%\Desktop\WPy64-3980\WinPython Command Prompt.exe"
 
-rem SET PATH=%PATH%;C:\Users\%USERNAME%\Desktop\WPy64-3980\python-3.9.8.amd64\
+SET PATH=C:\Users\%USERNAME%\Desktop\WPy64-3980\python-3.9.8.amd64\;%PATH%
 call C:\Users\%USERNAME%\Desktop\WPy64-3980\scripts\env.bat
 
 rem python setup.py install
