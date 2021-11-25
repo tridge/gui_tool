@@ -5,15 +5,15 @@ rem  get the large '64' file  Winpython64-3.9.8.0.exe => 788MB
 rem  ( as it has Qt and more other stuff included for us )
 rem https://github.com/winpython/winpython/releases/download/4.6.20211106/Winpython64-3.9.8.0.exe
 
-powershell -Command "Invoke-WebRequest https://github.com/winpython/winpython/releases/download/4.6.20211106/Winpython64-3.9.8.0.exe -OutFile Winpython64-3.9.8.0.exe"
+rem powershell -Command "Invoke-WebRequest https://github.com/winpython/winpython/releases/download/4.6.20211106/Winpython64-3.9.8.0.exe -OutFile Winpython64-3.9.8.0.exe"
 
 echo %USERNAME%
 dir
 
-copy Winpython64-3.9.8.0.exe C:\Users\%USERNAME%\Desktop
+rem copy Winpython64-3.9.8.0.exe C:\Users\%USERNAME%\Desktop
 
 cd C:\Users\%USERNAME%\Desktop
-Winpython64-3.9.8.0.exe -y -gm2
+rem Winpython64-3.9.8.0.exe -y -gm2
 
 echo C:\Users\%USERNAME%\Desktop\WPy64-3980\
 dir C:\Users\%USERNAME%\Desktop\WPy64-3980
